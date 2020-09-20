@@ -1,10 +1,11 @@
 import React from 'react';
-import BigText from '../components/BigText';
 
 const Home = () => {
     return (
         <div>
-            <BigText>홈</BigText>
+            <h2>
+                홈
+            </h2>
         </div>
     );
 };
