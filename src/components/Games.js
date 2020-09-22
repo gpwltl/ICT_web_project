@@ -4,27 +4,63 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import IconButton from '@material-ui/core/IconButton';
+import InfoIcon from '@material-ui/icons/Info';
+import image from '../images/logo.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        overflow: 'hidden',
+        backgroundColor: theme.palette.background.paper,
     },
-    paper: {
-        padding: theme.spacing(2),
-        margin: 'auto',
-        maxWidth: 500,
+    gridList: {
+        width: 500,
+        height: 450,
     },
-    image: {
-        width: 128,
-        height: 128,
-    },
-    img: {
-        margin: 'auto',
-        display: 'block',
-        maxWidth: '100%',
-        maxHeight: '100%',
+    icon: {
+        color: 'rgba(255, 255, 255, 0.54)',
     },
 }));
+
+const tileData = [
+    {
+        img: image,
+        title: 'gugudan',
+        author: 'dd',
+    },
+    {
+        img: image,
+        title: 'gugudan',
+        author: 'dd',
+    },
+    {
+        img: image,
+        title: 'gugudan',
+        author: 'dd',
+    },
+    {
+        img: image,
+        title: 'gugudan',
+        author: 'dd',
+    },
+    {
+        img: image,
+        title: 'gugudan',
+        author: 'dd',
+    },
+    {
+        img: image,
+        title: 'gugudan',
+        author: 'dd',
+    },
+];
 
 const Games = ({ isOpen, close }) => {
     const classes = useStyles();
@@ -32,43 +68,30 @@ const Games = ({ isOpen, close }) => {
         <React.Fragment>
             {
                 isOpen ?
-                    <>
+                    <div align="center">
                         <br /><p>hello, games</p>
                         <div className={classes.root}>
-                            <Paper className={classes.paper}>
-                                <Grid container spacing={2}>
-                                    <Grid item>
-                                        <ButtonBase className={classes.image}>
-                                            <img className={classes.img} alt="complex" src="/static/images/grid/complex.jpg" />
-                                        </ButtonBase>
-                                    </Grid>
-                                    <Grid item xs={12} sm container>
-                                        <Grid item xs container direction="column" spacing={2}>
-                                            <Grid item xs>
-                                                <Typography gutterBottom variant="subtitle1">
-                                                    Standard license
-                </Typography>
-                                                <Typography variant="body2" gutterBottom>
-                                                    Full resolution 1920x1080 • JPEG
-                </Typography>
-                                                <Typography variant="body2" color="textSecondary">
-                                                    ID: 1030114
-                </Typography>
-                                            </Grid>
-                                            <Grid item>
-                                                <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                                                    Remove
-                </Typography>
-                                            </Grid>
-                                        </Grid>
-                                        <Grid item>
-                                            <Typography variant="subtitle1">$19.00</Typography>
-                                        </Grid>
-                                    </Grid>
-                                </Grid>
-                            </Paper>
+                            <GridList cellHeight={180} className={classes.gridList}>
+                                <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+                                    <ListSubheader component="div">Game List</ListSubheader>
+                                </GridListTile>
+                                {tileData.map((tile) => (
+                                    <GridListTile key={tile.img}>
+                                        <img src={tile.img} alt={tile.title} />
+                                        <GridListTileBar
+                                            title={tile.title}
+                                            subtitle={<span>by: {tile.author}</span>}
+                                            actionIcon={
+                                                <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
+                                                    <InfoIcon />
+                                                </IconButton>
+                                            }
+                                        />
+                                    </GridListTile>
+                                ))}
+                            </GridList>
                         </div>
-                        <button onClick={close}>돌아가기</button> </>
+                        <button onClick={close}>돌아가기</button> </div>
 
                     : null
             }

@@ -39,6 +39,7 @@ const Start = () => {
 
     const clickReview = () => {
         setIsReview(!isReview);
+        setIsGame(false);
     }
 
     const closeReview = () => {
@@ -47,6 +48,7 @@ const Start = () => {
 
     const clickGame = () => {
         setIsGame(!isGame);
+        setIsReview(false);
     }
 
     const closeGame = () => {

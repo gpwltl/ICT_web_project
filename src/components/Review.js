@@ -5,9 +5,9 @@ const Review = ({ isOpen, close }) => {
         <React.Fragment>
             {
                 isOpen ?
-                    <>
+                    <div align="center">
                         <p>hello, review</p>
-                        <button onClick={close}>돌아가기</button> </>
+                        <button onClick={close}>돌아가기</button> </div>
 
                     : null
             }
