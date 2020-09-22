@@ -1,8 +1,7 @@
 import React from 'react';
-import './Modal.scss';
-import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
+import '../scss/About.scss';
 
-const Modal = ({ isOpen, close }) => {
+const About = ({ isOpen, close }) => {
     return (
         <React.Fragment>
             {
@@ -33,4 +32,4 @@ const Modal = ({ isOpen, close }) => {
         </React.Fragment>
     )
 }
-export default Modal;
+export default About;
