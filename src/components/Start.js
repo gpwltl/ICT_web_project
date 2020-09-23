@@ -20,9 +20,9 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(4),
     },
 
+
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const Start = () => {
     const classes = useStyles();
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -55,7 +55,6 @@ const Start = () => {
         setIsGame(false);
     }
 
-
     return (
         <main>
             <div className={classes.heroContent}>
@@ -78,7 +77,7 @@ const Start = () => {
 
                             <Grid item>
                                 <Button variant="contained" color="primary" onClick={clickGame}>
-                                    Start Game=3
+                                    Start Game
                                 </Button>
 
                             </Grid>
