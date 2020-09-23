@@ -36,9 +36,7 @@ const Games = ({ isOpen, close }) => {
                         <div className={classes.root}>
                             <GridList cellHeight={180} className={classes.gridList}>
                                 <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}></GridListTile>
-                                <Link exact to="/">HOME</Link>
-                                <Link exact to="/about">ABOUT</Link>
-                                <Link exact to="/review">REVIEW</Link>
+
                                 {tileData.map((tile) => (
                                     <GridListTile key={tile.img} >
                                         <img src={tile.img} alt={tile.title} />

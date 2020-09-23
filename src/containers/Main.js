@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import Bar from '../components/Bar'
 import Start from '../components/Start'
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Game from '../components/Game'
 
 const Main = () => {
     return (
@@ -12,6 +13,7 @@ const Main = () => {
             <Bar />
             {/* Contents */}
             <Start />
+            <Game />
             {/* Footer */}
             <Footer />
         </React.Fragment>

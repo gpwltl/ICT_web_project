@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import About from './About'
 import Review from './Review'
 import Games from './Games'
+import Game from './Game'
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -89,8 +90,9 @@ const Start = () => {
                                 <About isOpen={isModalOpen} close={closeModal} />
                             </Grid>
                         </Grid>
+                        {/* <Games isOpen={isGame} close={closeGame} /> */}
                         <Review isOpen={isReview} close={closeReview} />
-                        <Games isOpen={isGame} close={closeGame} />
+
                     </div>
                 </Container>
             </div>
