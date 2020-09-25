@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import About from './About'
 import Review from './Review'
-import Games from './Games'
-import Game from './Game'
+//import Games from './Games'
+//import Game from './Game'
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -52,15 +52,15 @@ const Start = () => {
         setIsReview(false);
     }
 
-    const closeGame = () => {
-        setIsGame(false);
-    }
+    // const closeGame = () => {
+    //     setIsGame(false);
+    // }
 
     return (
         <main>
             <div className={classes.heroContent}>
                 <Container maxWidth="sm">
-                    <img src={require('../images/logo2.png')} align="center" />
+                    <img src={require('../images/logo2.png')} alt="logo" align="center" />
 
                     <Typography variant="h6" align="center" color="textSecondary" paragraph>
                         GameCloud에 오신 걸 환영합니다. <br />
