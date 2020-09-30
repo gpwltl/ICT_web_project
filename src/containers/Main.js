@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import { Switch, Route } from "react-router-dom";
 import Gugudan from "../games/Gugudan";
 import WordChain from "../games/Wordchain";
+import ScrollToTop from "../ScrollToTop";
 
 const Main = () => {
   return (
@@ -14,6 +15,8 @@ const Main = () => {
       <CssBaseline />
       {/* Header */}
       <Bar />
+      {/* 새 페이지 들어갈 때 스크롤 맨 위로 */}
+      <ScrollToTop />
       <Switch>
         <Route path="/login" component={Login} />
         <Route exact path="/" component={Home} />
