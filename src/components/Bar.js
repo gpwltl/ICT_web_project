@@ -11,7 +11,9 @@ const Bar = () => {
             <AppBar position="relative" >
                 <Toolbar>
                     <Typography variant="h6" color="inherit" noWrap>
-                        <img src={require('../images/logo.png')} alt="logo" />
+                        <Link to="/">
+                            <img src={require('../images/logo.png')} alt="logo" />
+                        </Link>
                     </Typography>
 
                     <Link to="/login">

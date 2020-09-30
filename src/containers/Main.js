@@ -1,11 +1,10 @@
 import React from 'react';
 import Footer from '../components/Footer'
 import Bar from '../components/Bar'
-import Start from '../components/Start'
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Game from '../components/Game'
 import Login from './Login'
-import { Switch, Router } from 'react-router-dom'
+import Home from './Home'
+import { Switch, Route } from 'react-router-dom'
 
 const Main = () => {
     return (
@@ -14,11 +13,10 @@ const Main = () => {
             {/* Header */}
             <Bar />
             <Switch>
-                <Router path="/login" component={Login} />
+                <Route path="/login" component={Login} />
+                <Route exact path="/" component={Home} />
             </Switch>
-            {/* Contents */}
-            <Start />
-            <Game />
+
             {/* Footer */}
             <Footer />
         </React.Fragment>
