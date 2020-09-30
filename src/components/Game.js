@@ -66,10 +66,6 @@ const Game = () => {
                   <Link to={tile.link}>
                     <Button color="primary">Start</Button>
                   </Link>
-
-                  {/* <Button size="small" color="primary">
-                                        Edit
-                    </Button> */}
                 </CardActions>
               </Card>
             </Grid>
