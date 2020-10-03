@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTDMapper3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gpwltl.ict.mapper.ReviewMapper">
+
+	<insert id="insertReview"
+		parameterType="com.gpwltl.ict.vo.ReviewVO">
+		INSERT INTO reviews( title, contents)
+		VALUES(#{title},
+		#{contents})
+	</insert>
+
+	<select id="reviewList" resultType="com.gpwltl.ict.vo.ReviewVO">
+		SELECT * FROM reviews
+		ORDER BY id
+	</select>
+
+	<select id="fetchReviewsByID"
+		resultType="com.gpwltl.ict.vo.ReviewVO">
+		SELECT * FROM reviews
+		WHERE id=#{id}
+	</select>
+
+	<delete id="deleteReview" parameterType="int">
+		DELETE FROM reviews
+		WHERE
+		id=#{id}
+	</delete>
+
+	<update id="updateReview"
+		parameterType="com.gpwltl.ict.vo.ReviewVO">
+		UPDATE reviews
+		SET title=#{title}, contents=#{contents}
+		WHERE id=#{id}
+	</update>
+
+</mapper>
