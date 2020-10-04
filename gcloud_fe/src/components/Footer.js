@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
     position: "absolute",
-    top: "1250px",
+    top: "1600px",
     width: "100%",
   },
 }));
