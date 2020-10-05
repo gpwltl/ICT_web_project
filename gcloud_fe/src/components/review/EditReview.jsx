@@ -9,6 +9,7 @@ import SaveIcon from "@material-ui/icons/Save";
 class EditReview extends Component {
   constructor(props) {
     super(props);
+    this.goBack = this.goBack.bind(this);
 
     this.state = {
       id: "",
@@ -56,20 +57,25 @@ class EditReview extends Component {
         this.setState({
           message: review.title + ", 내용이 수정되었습니다.",
         });
-        this.props.history.push("/reviews");
+        this.props.history.push("/");
       })
       .catch((err) => {
         console.log("saveReview() Error!", err);
       });
   };
 
+  goBack() {
+    this.props.history.goBack();
+  }
+
   render() {
     return (
       <div>
-        <Typography variant="h4" style={style}>
+        <br />
+        <Typography variant="h6" style={style}>
           Edit Review
         </Typography>
-        <form>
+        <form style={formContainer}>
           <TextField
             type="text"
             name="title"
@@ -93,10 +99,19 @@ class EditReview extends Component {
           <Button
             variant="contained"
             color="primary"
+            size="small"
             startIcon={<SaveIcon />}
             onClick={this.saveReview}
           >
             Save
+          </Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            size="small"
+            onClick={this.goBack}
+          >
+            Back
           </Button>
         </form>
       </div>
@@ -104,9 +119,14 @@ class EditReview extends Component {
   }
 }
 
+const formContainer = {
+  display: "flex",
+  flexFlow: "row wrap",
+};
 const style = {
   display: "flex",
   justifyContent: "center",
+  color: "#0066cc",
 };
 
 export default EditReview;

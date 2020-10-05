@@ -9,6 +9,7 @@ import SaveIcon from "@material-ui/icons/Save";
 class AddReview extends Component {
   constructor(props) {
     super(props);
+    this.goBack = this.goBack.bind(this);
 
     this.state = {
       title: "",
@@ -36,17 +37,22 @@ class AddReview extends Component {
           message: review.title + ", 성공적으로 등록되었습니다.",
         });
         console.log(this.state.message);
-        this.props.history.push("/reviews");
+        this.props.history.push("/");
       })
       .catch((err) => {
         console.log("saveReview() Error!", err);
       });
   };
 
+  goBack() {
+    this.props.history.goBack();
+  }
+
   render() {
     return (
       <div>
-        <Typography variant="h4" style={style}>
+        <br />
+        <Typography variant="h6" style={style}>
           Add Review
         </Typography>
         <form style={formContainer}>
@@ -72,10 +78,19 @@ class AddReview extends Component {
           <Button
             variant="contained"
             color="primary"
+            size="small"
             startIcon={<SaveIcon />}
             onClick={this.saveReview}
           >
             Save
+          </Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            size="small"
+            onClick={this.goBack}
+          >
+            Back
           </Button>
         </form>
       </div>

@@ -67,16 +67,23 @@ class ReviewList extends Component {
   render() {
     return (
       <div>
+        <br />
         <Typography variant="h6" style={style}>
           Review List
         </Typography>
-        <Button variant="outlined" color="primary" onClick={this.addReview}>
+        <Button
+          variant="outlined"
+          color="primary"
+          size="small"
+          onClick={this.addReview}
+        >
           Add Review
         </Button>
+        <br />
+        <br />
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>ID</TableCell>
               <TableCell>TITLE</TableCell>
               <TableCell>Contents</TableCell>
             </TableRow>
@@ -84,9 +91,6 @@ class ReviewList extends Component {
           <TableBody>
             {this.state.reviews.map((review) => (
               <TableRow key={review.id}>
-                <TableCell component="th" scope="review">
-                  {review.id}
-                </TableCell>
                 <TableCell align="left">{review.title}</TableCell>
                 <TableCell align="left">{review.contents}</TableCell>
                 <TableCell
