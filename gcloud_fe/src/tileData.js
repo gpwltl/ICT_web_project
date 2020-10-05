@@ -18,6 +18,7 @@ const tileData = [
     img: require("./images/baseball.jpg"),
     title: "숫자야구",
     desc: "baseball on number~~~",
+    link: "./numberbaseball",
   },
   {
     card: 4,

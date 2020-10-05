@@ -8,6 +8,7 @@ import { Switch, Route } from "react-router-dom";
 import Gugudan from "../games/Gugudan";
 import WordChain from "../games/Wordchain";
 import ScrollToTop from "../ScrollToTop";
+import NumberBaseball from "../games/NumberBaseball/NumberBaseball";
 
 const Main = () => {
   return (
@@ -22,6 +23,7 @@ const Main = () => {
         <Route exact path="/" component={Home} />
         <Route path="/gugudan" component={Gugudan} />
         <Route path="/wordchain" component={WordChain} />
+        <Route path="/numberbaseball" component={NumberBaseball} />
       </Switch>
       {/* Footer */}
       <Footer />
