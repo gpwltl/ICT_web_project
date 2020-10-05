@@ -1,4 +1,4 @@
-package com.gpwltl.ict.vo;
+package com.gpwltl.ict.review.vo;
 
 import lombok.Data;
 

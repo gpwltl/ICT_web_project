@@ -1,4 +1,4 @@
-package com.gpwltl.ict.controller;
+package com.gpwltl.ict.review.controller;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gpwltl.ict.mapper.ReviewMapper;
-import com.gpwltl.ict.vo.ReviewVO;
+import com.gpwltl.ict.review.mapper.ReviewMapper;
+import com.gpwltl.ict.review.vo.ReviewVO;
 
 @CrossOrigin(origins="*", maxAge=3600)
 @RestController

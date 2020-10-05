@@ -1,10 +1,10 @@
-package com.gpwltl.ict.mapper;
+package com.gpwltl.ict.review.mapper;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.gpwltl.ict.vo.ReviewVO;
+import com.gpwltl.ict.review.vo.ReviewVO;
 
 @Mapper
 public interface ReviewMapper {
