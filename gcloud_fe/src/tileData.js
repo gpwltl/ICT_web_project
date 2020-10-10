@@ -22,8 +22,10 @@ const tileData = [
   },
   {
     card: 4,
-    img: require("./images/dog.jpg"),
-    title: "Image1",
+    img: require("./images/rsp.jpg"),
+    title: "가위바위보",
+    desc: "rock sissor paper~~ ",
+    link: "./rsp",
   },
   {
     card: 5,

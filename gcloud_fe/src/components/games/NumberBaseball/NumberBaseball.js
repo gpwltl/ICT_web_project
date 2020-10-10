@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Try from "./Try";
-import "../../scss/NumberBaseball.scss";
+import "../../../scss/NumberBaseball.scss";
 
 function getNumbers() {
   //숫자 4개를 겹치지 않고 랜덤하게 뽑는 함수
@@ -23,7 +23,7 @@ class NumberBaseball extends Component {
   };
 
   onSubmitForm = (e) => {
-    const { result, value, tries, answer, count } = this.state;
+    const { value, tries, answer, count } = this.state;
     e.preventDefault();
     this.setState({ result: "" });
     if (value === answer.join("")) {

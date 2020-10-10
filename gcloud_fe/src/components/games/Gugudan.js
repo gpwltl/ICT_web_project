@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../scss/Gugudan.scss";
+import "../../scss/Gugudan.scss";
 
 class Gugudan extends Component {
   state = {

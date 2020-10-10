@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../scss/NumberBaseball.scss";
+import "../../../scss/NumberBaseball.scss";
 
 class Try extends Component {
   render() {

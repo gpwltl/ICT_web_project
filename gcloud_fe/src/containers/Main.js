@@ -5,10 +5,11 @@ import Login from "./Login";
 import Home from "./Home";
 import Footer from "../components/Footer";
 import { Switch, Route } from "react-router-dom";
-import Gugudan from "../games/Gugudan";
-import WordChain from "../games/Wordchain";
+import Gugudan from "../components/games/Gugudan";
+import WordChain from "../components/games/Wordchain";
 import ScrollToTop from "../ScrollToTop";
-import NumberBaseball from "../games/NumberBaseball/NumberBaseball";
+import NumberBaseball from "../components/games/NumberBaseball/NumberBaseball";
+import RSP from "../components/games/RSP";
 
 const Main = () => {
   return (
@@ -24,6 +25,7 @@ const Main = () => {
         <Route path="/gugudan" component={Gugudan} />
         <Route path="/wordchain" component={WordChain} />
         <Route path="/numberbaseball" component={NumberBaseball} />
+        <Route path="/rsp" component={RSP} />
       </Switch>
       {/* Footer */}
       <Footer />

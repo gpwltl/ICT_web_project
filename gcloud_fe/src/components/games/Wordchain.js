@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../scss/WordChain.scss";
+import "../../scss/WordChain.scss";
 
 class WordChain extends Component {
   state = {
