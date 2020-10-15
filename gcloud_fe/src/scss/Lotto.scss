@@ -1,0 +1,43 @@
+.title_l {
+  background-color: #c5abe4;
+  text-align: center;
+}
+.choice_num_title {
+  background-color: #c5abe4;
+  position: absolute;
+  left: 48%;
+  top: 53%;
+}
+.choice_num {
+  position: absolute;
+  left: 38%;
+  top: 60%;
+}
+
+.bonus_title {
+  position: absolute;
+  left: 32%;
+  top: 71.5%;
+}
+.bonus_ball {
+  position: absolute;
+  left: 38%;
+  top: 70%;
+}
+.button_onemore {
+  position: absolute;
+  left: 53%;
+  top: 52.95%;
+}
+
+.ball {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 20px;
+}

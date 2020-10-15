@@ -22,10 +22,10 @@ const tileData = [
   },
   {
     card: 4,
-    img: require("./images/rsp.jpg"),
-    title: "가위바위보",
-    desc: "rock sissor paper~~ ",
-    link: "./rsp",
+    img: require("./images/lottery.jpg"),
+    title: "로또 추첨기",
+    desc: "간이 로또 추첨기 해볼 사람~~ 친구와 함께 참여하세요!!",
+    link: "./lotto",
   },
   {
     card: 5,

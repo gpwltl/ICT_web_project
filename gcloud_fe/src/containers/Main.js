@@ -9,7 +9,7 @@ import Gugudan from "../components/games/Gugudan";
 import WordChain from "../components/games/Wordchain";
 import ScrollToTop from "../ScrollToTop";
 import NumberBaseball from "../components/games/NumberBaseball/NumberBaseball";
-import RSP from "../components/games/RSP";
+import Lotto from "../components/games/Lotto/Lotto";
 
 const Main = () => {
   return (
@@ -25,7 +25,7 @@ const Main = () => {
         <Route path="/gugudan" component={Gugudan} />
         <Route path="/wordchain" component={WordChain} />
         <Route path="/numberbaseball" component={NumberBaseball} />
-        <Route path="/rsp" component={RSP} />
+        <Route path="/lotto" component={Lotto} />
       </Switch>
       {/* Footer */}
       <Footer />
