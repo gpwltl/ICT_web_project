@@ -30,12 +30,12 @@ const tileData = [
   {
     card: 5,
     img: require("./images/dog.jpg"),
-    title: "Image1",
+    title: "Game1",
   },
   {
     card: 6,
     img: require("./images/dog.jpg"),
-    title: "Image1",
+    title: "Game2",
   },
 ];
 
