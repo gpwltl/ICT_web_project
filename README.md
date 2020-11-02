@@ -1,4 +1,4 @@
-# :cloud: GCloud :cloud:
+# :cloud: GameCloud :cloud:
 
 #### 1. 프로젝트 소개
 
